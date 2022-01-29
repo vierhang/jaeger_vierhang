@@ -1,6 +1,16 @@
 # jaeger_vierhang
 
-执行go run main.go
+## 安装jaeger
+```bash
+docker run \
+  --rm \
+  --name jaeger \
+  -p6831:6831/udp \
+  -p16686:16686 \
+  jaegertracing/all-in-one:latest
+```
+
+执行go run example_one_span.go
 ![img.png](images/img.png)
 
 进入jaeger后台
